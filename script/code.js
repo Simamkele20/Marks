@@ -1,4 +1,6 @@
 let btnSubmit = document.querySelector("[data-Submit]")
+let btnClear = document.querySelector("[data-Clear]");
+document.getElementById("reset").onclick = reset;
 
 function Results(){
     let Marks = +document.querySelector("[data-Marks]").value
@@ -33,5 +35,13 @@ switch (true) {
    
 }   
 }
+
+function reset() {
+    let Output= document.querySelector("[data-Output]")
+    document.querySelector("[data-Submit]").value =" ";
+    document.querySelector("[data-Marks]").value =" "; 
+     Output.textContent =""
+  }
  
+
 btnSubmit.addEventListener("click",Results)
